@@ -1,0 +1,37 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px); /* Ajusta três itens por linha */
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transição suave para o zoom */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove o espaço abaixo da imagem */
+    transition: transform 0.3s ease; /* Transição suave para o zoom */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
+}
